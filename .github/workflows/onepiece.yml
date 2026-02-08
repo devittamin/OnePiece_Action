@@ -1,8 +1,8 @@
-name: Daily One Piece Character (Jikan)
+name: Daily One Piece (local dataset)
 
 on:
   schedule:
-    - cron: "0 15 * * *"  # KST 00:00 (UTC 15:00)
+    - cron: "0 15 * * *" # KST 00:00
   workflow_dispatch:
 
 permissions:
@@ -12,56 +12,19 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install jq
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update README
+        run: python scripts/pick_character.py
+
+      - name: Commit & push
         run: |
-          sudo apt-get update
-          sudo apt-get install -y jq
-
-      - name: Fetch OP characters & update image/name
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          BASE="https://api.jikan.moe/v4"
-
-          # 1) One Piece 애니 검색 -> mal_id 가져오기
-          # (Jikan v4 search)
-          anime_json="$(curl -sS --fail "${BASE}/anime?q=One%20Piece&limit=1&order_by=members&sort=desc")"
-          anime_id="$(echo "$anime_json" | jq -r '.data[0].mal_id')"
-
-          if [ -z "$anime_id" ] || [ "$anime_id" = "null" ]; then
-            echo "Failed to get One Piece anime id"
-            echo "$anime_json" | head -c 400; echo
-            exit 1
-          fi
-
-          # 2) 해당 애니의 캐릭터 목록 가져오기
-          # (Jikan v4 anime characters)
-          chars_json="$(curl -sS --fail "${BASE}/anime/${anime_id}/characters")"
-
-          # 캐릭터 배열 추출
-          count="$(echo "$chars_json" | jq '.data | length')"
-          if [ "$count" -le 0 ]; then
-            echo "No characters returned"
-            echo "$chars_json" | head -c 400; echo
-            exit 1
-          fi
-
-          # 3) 랜덤 선택
-          idx=$((RANDOM % count))
-          name="$(echo "$chars_json" | jq -r ".data[$idx].character.name")"
-          img="$(echo "$chars_json" | jq -r ".data[$idx].character.images.jpg.image_url // .data[$idx].character.images.webp.image_url // empty")"
-
-          # 이미지가 비어있으면 몇 번 더 시도
-          for attempt in $(seq 1 15); do
-            if [ -n "$img" ] && [ "$img" != "null" ]; then break; fi
-            idx=$((RANDOM % count))
-            name="$(echo "$chars_json" | jq -r ".data[$idx].character.name")"
-            img="$(echo "$chars_json" | jq -r ".data[$idx].character.images.jpg.image_url // .data[$idx].character.images.webp.image_url // empty")"
-          done
-
-          if [ -z "$img" ] || [ "$img" = "null" ]; then
-            echo "Failed to f
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "chore: daily one piece update" || exit 0
+          git push
