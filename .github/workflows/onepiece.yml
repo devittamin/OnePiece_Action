@@ -1,0 +1,104 @@
+name: Daily One Piece Character (RapidAPI)
+
+on:
+  schedule:
+    - cron: "0 15 * * *"  # KST 00:00 (UTC 15:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Fetch list, pick random, download image
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
+          ONEPIECE_TOKEN: ${{ secrets.ONEPIECE_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          API_URL="https://${RAPIDAPI_HOST}/api/get-character-list"
+
+          json="$(curl -sS --fail \
+            -H "x-rapidapi-key: ${RAPIDAPI_KEY}" \
+            -H "x-rapidapi-host: ${RAPIDAPI_HOST}" \
+            -H "token: ${ONEPIECE_TOKEN}" \
+            "$API_URL")"
+
+          candidates="$(echo "$json" | jq -c 'if type=="array" then . elif .data and (.data|type=="array") then .data else empty end')"
+          if [ -z "$candidates" ] || [ "$candidates" = "null" ]; then
+            echo "Unexpected response shape. First 300 chars:"
+            echo "$json" | head -c 300; echo
+            exit 1
+          fi
+
+          count="$(echo "$candidates" | jq 'length')"
+          if [ "$count" -le 0 ]; then
+            echo "No characters returned."
+            exit 1
+          fi
+
+          pick_one() {
+            local idx="$1"
+            echo "$candidates" | jq -r --argjson i "$idx" '
+              .[$i] as $c |
+              ($c.engName // $c.name // $c.romanName // $c.japanName // $c.title // "Unknown") as $name |
+              (
+                $c.img // $c.image // $c.picture // $c.avatar // $c.imageUrl //
+                ($c.images[0]? // empty) //
+                ($c.image[0]? // empty)
+              ) as $img |
+              [$name, $img] | @tsv
+            '
+          }
+
+          chosen_name=""
+          chosen_img=""
+
+          for attempt in $(seq 1 30); do
+            idx=$((RANDOM % count))
+            line="$(pick_one "$idx")"
+            chosen_name="$(echo "$line" | cut -f1)"
+            chosen_img="$(echo "$line" | cut -f2)"
+
+            if [ -n "$chosen_img" ] && [ "$chosen_img" != "null" ]; then
+              break
+            fi
+          done
+
+          if [ -z "$chosen_img" ] || [ "$chosen_img" = "null" ]; then
+            echo "Failed to find a character with an image after retries."
+            exit 1
+          fi
+
+          mkdir -p images
+          curl -L --fail -o images/today.jpg "$chosen_img"
+          echo "$chosen_name" > images/today_name.txt
+
+      - name: Update README character name
+        shell: bash
+        run: |
+          set -euo pipefail
+          name="$(cat images/today_name.txt)"
+          sed -i "s/<!--OP_NAME_START-->.*<!--OP_NAME_END-->/<!--OP_NAME_START-->${name}<!--OP_NAME_END-->/" README.md
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add images/today.jpg images/today_name.txt README.md
+          git commit -m "chore: daily one piece character" || exit 0
+          git push
