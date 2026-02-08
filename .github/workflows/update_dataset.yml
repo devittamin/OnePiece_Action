@@ -1,0 +1,40 @@
+name: Update One Piece Dataset (weekly)
+
+on:
+  schedule:
+    - cron: "0 16 * * 0" # KST 월요일 01:00 (UTC 16:00, 일요일)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Clone scraper & install
+        run: |
+          git clone https://github.com/JassonCordones/one-piece-character-data-scraper.git scraper
+          python -m pip install --upgrade pip
+          pip install -r scraper/requirements.txt
+
+      - name: Run scraper → data/characters.json
+        run: |
+          mkdir -p data
+          cd scraper
+          scrapy crawl char_info -o ../data/characters.json
+
+      - name: Commit & push dataset
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/characters.json
+          git commit -m "chore: update characters dataset" || exit 0
+          git push
