@@ -1,4 +1,4 @@
-name: Daily One Piece Character (RapidAPI)
+name: Daily One Piece Character (Jikan)
 
 on:
   schedule:
@@ -20,85 +20,48 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y jq
 
-      - name: Fetch list, pick random, download image
-        env:
-          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-          RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
-          ONEPIECE_TOKEN: ${{ secrets.ONEPIECE_TOKEN }}
+      - name: Fetch OP characters & update image/name
         shell: bash
         run: |
           set -euo pipefail
 
-          API_URL="https://${RAPIDAPI_HOST}/api/get-character-list"
+          BASE="https://api.jikan.moe/v4"
 
-          json="$(curl -sS --fail \
-            -H "x-rapidapi-key: ${RAPIDAPI_KEY}" \
-            -H "x-rapidapi-host: ${RAPIDAPI_HOST}" \
-            -H "token: ${ONEPIECE_TOKEN}" \
-            "$API_URL")"
+          # 1) One Piece 애니 검색 -> mal_id 가져오기
+          # (Jikan v4 search)
+          anime_json="$(curl -sS --fail "${BASE}/anime?q=One%20Piece&limit=1&order_by=members&sort=desc")"
+          anime_id="$(echo "$anime_json" | jq -r '.data[0].mal_id')"
 
-          candidates="$(echo "$json" | jq -c 'if type=="array" then . elif .data and (.data|type=="array") then .data else empty end')"
-          if [ -z "$candidates" ] || [ "$candidates" = "null" ]; then
-            echo "Unexpected response shape. First 300 chars:"
-            echo "$json" | head -c 300; echo
+          if [ -z "$anime_id" ] || [ "$anime_id" = "null" ]; then
+            echo "Failed to get One Piece anime id"
+            echo "$anime_json" | head -c 400; echo
             exit 1
           fi
 
-          count="$(echo "$candidates" | jq 'length')"
+          # 2) 해당 애니의 캐릭터 목록 가져오기
+          # (Jikan v4 anime characters)
+          chars_json="$(curl -sS --fail "${BASE}/anime/${anime_id}/characters")"
+
+          # 캐릭터 배열 추출
+          count="$(echo "$chars_json" | jq '.data | length')"
           if [ "$count" -le 0 ]; then
-            echo "No characters returned."
+            echo "No characters returned"
+            echo "$chars_json" | head -c 400; echo
             exit 1
           fi
 
-          pick_one() {
-            local idx="$1"
-            echo "$candidates" | jq -r --argjson i "$idx" '
-              .[$i] as $c |
-              ($c.engName // $c.name // $c.romanName // $c.japanName // $c.title // "Unknown") as $name |
-              (
-                $c.img // $c.image // $c.picture // $c.avatar // $c.imageUrl //
-                ($c.images[0]? // empty) //
-                ($c.image[0]? // empty)
-              ) as $img |
-              [$name, $img] | @tsv
-            '
-          }
+          # 3) 랜덤 선택
+          idx=$((RANDOM % count))
+          name="$(echo "$chars_json" | jq -r ".data[$idx].character.name")"
+          img="$(echo "$chars_json" | jq -r ".data[$idx].character.images.jpg.image_url // .data[$idx].character.images.webp.image_url // empty")"
 
-          chosen_name=""
-          chosen_img=""
-
-          for attempt in $(seq 1 30); do
+          # 이미지가 비어있으면 몇 번 더 시도
+          for attempt in $(seq 1 15); do
+            if [ -n "$img" ] && [ "$img" != "null" ]; then break; fi
             idx=$((RANDOM % count))
-            line="$(pick_one "$idx")"
-            chosen_name="$(echo "$line" | cut -f1)"
-            chosen_img="$(echo "$line" | cut -f2)"
-
-            if [ -n "$chosen_img" ] && [ "$chosen_img" != "null" ]; then
-              break
-            fi
+            name="$(echo "$chars_json" | jq -r ".data[$idx].character.name")"
+            img="$(echo "$chars_json" | jq -r ".data[$idx].character.images.jpg.image_url // .data[$idx].character.images.webp.image_url // empty")"
           done
 
-          if [ -z "$chosen_img" ] || [ "$chosen_img" = "null" ]; then
-            echo "Failed to find a character with an image after retries."
-            exit 1
-          fi
-
-          mkdir -p images
-          curl -L --fail -o images/today.jpg "$chosen_img"
-          echo "$chosen_name" > images/today_name.txt
-
-      - name: Update README character name
-        shell: bash
-        run: |
-          set -euo pipefail
-          name="$(cat images/today_name.txt)"
-          sed -i "s/<!--OP_NAME_START-->.*<!--OP_NAME_END-->/<!--OP_NAME_START-->${name}<!--OP_NAME_END-->/" README.md
-
-      - name: Commit & push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-
-          git add images/today.jpg images/today_name.txt README.md
-          git commit -m "chore: daily one piece character" || exit 0
-          git push
+          if [ -z "$img" ] || [ "$img" = "null" ]; then
+            echo "Failed to f
