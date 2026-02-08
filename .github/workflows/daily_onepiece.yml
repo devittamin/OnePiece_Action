@@ -12,14 +12,25 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Debug (list files)
+        run: |
+          pwd
+          ls -la
+          ls -la scripts || true
+          find . -maxdepth 3 -type f | head -n 200
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Update README
-        run: python scripts/pick_character.py
+      - name: Run updater
+        run: |
+          python --version
+          python scripts/pick_character.py
 
       - name: Commit & push
         run: |
