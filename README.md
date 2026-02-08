@@ -1,9 +1,9 @@
 ## 오늘의 해적 🏴‍☠️
 
-- **이름:** <!--OP_CHAR_NAME_START-->Lindbergh<!--OP_CHAR_NAME_END-->
-- **별명:** <!--OP_CHAR_EPITHET_START-->Commander of the "southern" troop<!--OP_CHAR_EPITHET_END-->
-- **🤑 현상금 💰 :** <!--OP_CHAR_BOUNTY_START-->316,000,000<!--OP_CHAR_BOUNTY_END-->
+- **이름:** <!--OP_CHAR_NAME_START-->Black Maria<!--OP_CHAR_NAME_END-->
+- **별명:** <!--OP_CHAR_EPITHET_START-->Tobi Roppo<!--OP_CHAR_EPITHET_END-->
+- **🤑 현상금 💰 :** <!--OP_CHAR_BOUNTY_START-->480,000,000<!--OP_CHAR_BOUNTY_END-->
 
 <!--OP_CHAR_IMG_START-->
-![Character](https://cdn.myanimelist.net/images/characters/5/377113.jpg?s=8ff0371fa3425ff92ffe1bfaa26106ca)
+![Character](https://cdn.myanimelist.net/images/characters/8/453098.jpg?s=e810b5ad66ea3c21bf52e25748aaea2e)
 <!--OP_CHAR_IMG_END-->
