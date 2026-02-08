@@ -1,18 +1,802 @@
 [
   {
+    "name": "Gol D. Roger",
+    "Epithet": "Captain",
+    "Bounty": "5,564,800,000",
+    "Images": [
+      "https://robohash.org/Gol%20D.%20Roger.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Edward Newgate / Barbe Blanche",
+    "Epithet": "Captain",
+    "Bounty": "5,046,000,000",
+    "Images": [
+      "https://robohash.org/Edward%20Newgate%20/%20Barbe%20Blanche.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Kaido",
+    "Epithet": "Captain",
+    "Bounty": "4,611,100,000",
+    "Images": [
+      "https://robohash.org/Kaido.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Linlin / Big Mom",
+    "Epithet": "Captain",
+    "Bounty": "4,388,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Linlin%20/%20Big%20Mom.png?size=600x400&set=set4"
+    ]
+  },
+  {
     "name": "Shanks",
-    "Epithet": "Red-Haired Shanks",
+    "Epithet": "Captain",
     "Bounty": "4,048,900,000",
     "Images": [
-      "https://static.wikia.nocookie.net/onepiece/images/6/66/Shanks_Anime_Infobox.png"
+      "https://robohash.org/Shanks.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Monkey D Luffy",
+    "Epithet": "Captain",
+    "Bounty": "3,000,000,000",
+    "Images": [
+      "https://robohash.org/Monkey%20D%20Luffy.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Marchall D. Teach / Barbe Noire",
+    "Epithet": "Pirate",
+    "Bounty": "2,247,600,000",
+    "Images": [
+      "https://robohash.org/Marchall%20D.%20Teach%20/%20Barbe%20Noire.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "King",
+    "Epithet": "Superstar",
+    "Bounty": "1,390,000,000",
+    "Images": [
+      "https://robohash.org/King.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Marco",
+    "Epithet": "Sphinx (doctor) / Command 1st Whitebeard Fleet",
+    "Bounty": "1,374,000,000",
+    "Images": [
+      "https://robohash.org/Marco.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Queen",
+    "Epithet": "Superstar",
+    "Bounty": "1,320,000,000",
+    "Images": [
+      "https://robohash.org/Queen.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Dent-de-chien",
+    "Epithet": "General Sucré",
+    "Bounty": "1,057,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Dent-de-chien.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Jack",
+    "Epithet": "Superstar",
+    "Bounty": "1,000,000,000",
+    "Images": [
+      "https://robohash.org/Jack.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Smoothie",
+    "Epithet": "General Sucré",
+    "Bounty": "932,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Smoothie.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Cracker",
+    "Epithet": "General Sucré",
+    "Bounty": "860,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Cracker.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Slurp",
+    "Epithet": "Lieutenant",
+    "Bounty": "700,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Slurp.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Suleiman",
+    "Epithet": "Fighter",
+    "Bounty": "670,000,000",
+    "Images": [
+      "https://robohash.org/Suleiman.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Gambia",
+    "Epithet": "Advisor",
+    "Bounty": "670,000,000",
+    "Images": [
+      "https://robohash.org/Gambia.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Sabo",
+    "Epithet": "Chief of Staff",
+    "Bounty": "602,000,000",
+    "Images": [
+      "https://robohash.org/Sabo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Snack",
+    "Epithet": "Lieutenant",
+    "Bounty": "600,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Snack.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Portgas D. Ace",
+    "Epithet": "Commander 2nd Ship",
+    "Bounty": "550,000,000",
+    "Images": [
+      "https://robohash.org/Portgas%20D.%20Ace.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Little Oz Junior",
+    "Epithet": "Subordinate",
+    "Bounty": "550,000,000",
+    "Images": [
+      "https://robohash.org/Little%20Oz%20Junior.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Who’s Who",
+    "Epithet": "Tobi Roppo",
+    "Bounty": "546,000,000",
+    "Images": [
+      "https://robohash.org/Who%E2%80%99s%20Who.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Chinjao",
+    "Epithet": "N/A",
+    "Bounty": "542,000,000",
+    "Images": [
+      "https://robohash.org/Chinjao.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Izo",
+    "Epithet": "Red sheaths",
+    "Bounty": "510,000,000",
+    "Images": [
+      "https://robohash.org/Izo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Trafalgar D. Water Law",
+    "Epithet": "Captain",
+    "Bounty": "500,000,000",
+    "Images": [
+      "https://robohash.org/Trafalgar%20D.%20Water%20Law.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Edward Weeble",
+    "Epithet": "N/A",
+    "Bounty": "480,000,000",
+    "Images": [
+      "https://robohash.org/Edward%20Weeble.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Black Maria",
+    "Epithet": "Tobi Roppo",
+    "Bounty": "480,000,000",
+    "Images": [
+      "https://robohash.org/Black%20Maria.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Sasaki",
+    "Epithet": "Tobi Roppo",
+    "Bounty": "472,000,000",
+    "Images": [
+      "https://robohash.org/Sasaki.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Eustass Kidd",
+    "Epithet": "Captain",
+    "Bounty": "470,000,000",
+    "Images": [
+      "https://robohash.org/Eustass%20Kidd.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Belo Betty",
+    "Epithet": "Commander of the \"Oriental\" troop",
+    "Bounty": "457,000,000",
+    "Images": [
+      "https://robohash.org/Belo%20Betty.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Jinbe",
+    "Epithet": "Helmsman",
+    "Bounty": "438,000,000",
+    "Images": [
+      "https://robohash.org/Jinbe.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Delœuf",
+    "Epithet": "Fighter",
+    "Bounty": "429,000,000",
+    "Images": [
+      "https://robohash.org/Del%C5%93uf.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Ulti",
+    "Epithet": "Tobi Roppo",
+    "Bounty": "400,000,000",
+    "Images": [
+      "https://robohash.org/Ulti.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Corbeau",
+    "Epithet": "Commander of the \"Septentrionale\" troop",
+    "Bounty": "400,000,000",
+    "Images": [
+      "https://robohash.org/Corbeau.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Capone Bege",
+    "Epithet": "Captain",
+    "Bounty": "350,000,000",
+    "Images": [
+      "https://robohash.org/Capone%20Bege.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Don Quijote Doflamingo",
+    "Epithet": "Captain",
+    "Bounty": "340,000,000",
+    "Images": [
+      "https://robohash.org/Don%20Quijote%20Doflamingo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Sanji",
+    "Epithet": "Cook",
+    "Bounty": "330,000,000",
+    "Images": [
+      "https://robohash.org/Sanji.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Cavendish",
+    "Epithet": "Captain",
+    "Bounty": "330,000,000",
+    "Images": [
+      "https://robohash.org/Cavendish.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Pekoms",
+    "Epithet": "Fighter",
+    "Bounty": "330,000,000",
+    "Images": [
+      "https://robohash.org/Pekoms.png?size=600x400&set=set4"
     ]
   },
   {
     "name": "Roronoa Zoro",
-    "Epithet": "Pirate Hunter",
-    "Bounty": "1,111,000,000",
+    "Epithet": "Right-hand man",
+    "Bounty": "320,000,000",
     "Images": [
-      "https://static.wikia.nocookie.net/onepiece/images/3/37/Roronoa_Zoro_Anime_Post_Timeskip_Infobox.png"
+      "https://robohash.org/Roronoa%20Zoro.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Gecko Moria",
+    "Epithet": "Captain",
+    "Bounty": "320,000,000",
+    "Images": [
+      "https://robohash.org/Gecko%20Moria.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Basil Hawkins",
+    "Epithet": "Vedette",
+    "Bounty": "320,000,000",
+    "Images": [
+      "https://robohash.org/Basil%20Hawkins.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Lindbergh",
+    "Epithet": "Commander of the \"southern\" troop",
+    "Bounty": "316,000,000",
+    "Images": [
+      "https://robohash.org/Lindbergh.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Daifuku",
+    "Epithet": "Lieutenant",
+    "Bounty": "300,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Daifuku.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Oven",
+    "Epithet": "Lieutenant",
+    "Bounty": "300,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Oven.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "César Clown",
+    "Epithet": "N/A",
+    "Bounty": "300,000,000",
+    "Images": [
+      "https://robohash.org/C%C3%A9sar%20Clown.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Bartholomew Kuma",
+    "Epithet": "Lieutenant",
+    "Bounty": "296,000,000",
+    "Images": [
+      "https://robohash.org/Bartholomew%20Kuma.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Morley",
+    "Epithet": "Western\" troop commander",
+    "Bounty": "293,000,000",
+    "Images": [
+      "https://robohash.org/Morley.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Page One",
+    "Epithet": "Tobi Roppo",
+    "Bounty": "290,000,000",
+    "Images": [
+      "https://robohash.org/Page%20One.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Ficher Tiger",
+    "Epithet": "Captain",
+    "Bounty": "230,000,000",
+    "Images": [
+      "https://robohash.org/Ficher%20Tiger.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Sai",
+    "Epithet": "13th Chief Commander",
+    "Bounty": "210,000,000",
+    "Images": [
+      "https://robohash.org/Sai.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Caribou",
+    "Epithet": "Co-Captain",
+    "Bounty": "210,000,000",
+    "Images": [
+      "https://robohash.org/Caribou.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Squardo",
+    "Epithet": "Subordinate",
+    "Bounty": "210,000,000",
+    "Images": [
+      "https://robohash.org/Squardo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Usopp",
+    "Epithet": "Sniper",
+    "Bounty": "200,000,000",
+    "Images": [
+      "https://robohash.org/Usopp.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Bartolomeo",
+    "Epithet": "Captain",
+    "Bounty": "200,000,000",
+    "Images": [
+      "https://robohash.org/Bartolomeo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Killer",
+    "Epithet": "Fighter",
+    "Bounty": "200,000,000",
+    "Images": [
+      "https://robohash.org/Killer.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Bellamy",
+    "Epithet": "Private",
+    "Bounty": "195,000,000",
+    "Images": [
+      "https://robohash.org/Bellamy.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Coribou",
+    "Epithet": "Co-Captain",
+    "Bounty": "190,000,000",
+    "Images": [
+      "https://robohash.org/Coribou.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Boddin",
+    "Epithet": "Fighter",
+    "Bounty": "155,000,000",
+    "Images": [
+      "https://robohash.org/Boddin.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Baggy / Le Clown",
+    "Epithet": "Chairman",
+    "Bounty": "150,000,000",
+    "Images": [
+      "https://robohash.org/Baggy%20/%20Le%20Clown.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Dellinger",
+    "Epithet": "Lieutenant of the Army of Diamante",
+    "Bounty": "150,000,000",
+    "Images": [
+      "https://robohash.org/Dellinger.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Orlumbus",
+    "Epithet": "Admiral",
+    "Bounty": "148,000,000",
+    "Images": [
+      "https://robohash.org/Orlumbus.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Orlombus",
+    "Epithet": "Admiral",
+    "Bounty": "148,000,000",
+    "Images": [
+      "https://robohash.org/Orlombus.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Jewelry Bonney",
+    "Epithet": "Captain",
+    "Bounty": "140,000,000",
+    "Images": [
+      "https://robohash.org/Jewelry%20Bonney.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Nico Robin",
+    "Epithet": "Archaeologist",
+    "Bounty": "130,000,000",
+    "Images": [
+      "https://robohash.org/Nico%20Robin.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Charlotte Mont d’Or",
+    "Epithet": "Lieutenant",
+    "Bounty": "120,000,000",
+    "Images": [
+      "https://robohash.org/Charlotte%20Mont%20d%E2%80%99Or.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Urouge",
+    "Epithet": "Captain",
+    "Bounty": "108,000,000",
+    "Images": [
+      "https://robohash.org/Urouge.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Emporio Ivankov",
+    "Epithet": "Command of troop G",
+    "Bounty": "100,000,000",
+    "Images": [
+      "https://robohash.org/Emporio%20Ivankov.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Inazuma",
+    "Epithet": "Sub-Commander of \"G\" Troop",
+    "Bounty": "100,000,000",
+    "Images": [
+      "https://robohash.org/Inazuma.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Trébol",
+    "Epithet": "Lieutenant-Chef",
+    "Bounty": "99,000,000",
+    "Images": [
+      "https://robohash.org/Tr%C3%A9bol.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Diamante",
+    "Epithet": "Lieutenant-Chef",
+    "Bounty": "99,000,000",
+    "Images": [
+      "https://robohash.org/Diamante.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Pica",
+    "Epithet": "Lieutenant-Chef",
+    "Bounty": "99,000,000",
+    "Images": [
+      "https://robohash.org/Pica.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Vito",
+    "Epithet": "Advisor",
+    "Bounty": "95,000,000",
+    "Images": [
+      "https://robohash.org/Vito.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Général Gasparde",
+    "Epithet": "Captain",
+    "Bounty": "95,000,000",
+    "Images": [
+      "https://robohash.org/G%C3%A9n%C3%A9ral%20Gasparde.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Franky",
+    "Epithet": "Carpenter",
+    "Bounty": "94,000,000",
+    "Images": [
+      "https://robohash.org/Franky.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Rockstar",
+    "Epithet": "N/A",
+    "Bounty": "94,000,000",
+    "Images": [
+      "https://robohash.org/Rockstar.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Gotti",
+    "Epithet": "Assassin",
+    "Bounty": "90,000,000",
+    "Images": [
+      "https://robohash.org/Gotti.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Brook",
+    "Epithet": "Musician",
+    "Bounty": "83,000,000",
+    "Images": [
+      "https://robohash.org/Brook.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Crocodile",
+    "Epithet": "N/A",
+    "Bounty": "81,000,000",
+    "Images": [
+      "https://robohash.org/Crocodile.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Barbos Bruneriguez / Barbe Brune",
+    "Epithet": "Captain",
+    "Bounty": "80,060,000",
+    "Images": [
+      "https://robohash.org/Barbos%20Bruneriguez%20/%20Barbe%20Brune.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Boa Hancock",
+    "Epithet": "Captain",
+    "Bounty": "80,000,000",
+    "Images": [
+      "https://robohash.org/Boa%20Hancock.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Das Bones",
+    "Epithet": "N/A",
+    "Bounty": "75,000,000",
+    "Images": [
+      "https://robohash.org/Das%20Bones.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Doc Q",
+    "Epithet": "Commander 9th Ship",
+    "Bounty": "72,000,000",
+    "Images": [
+      "https://robohash.org/Doc%20Q.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Nami",
+    "Epithet": "Navigator",
+    "Bounty": "66,000,000",
+    "Images": [
+      "https://robohash.org/Nami.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Van Auger",
+    "Epithet": "Commander 3rd Ship",
+    "Bounty": "64,000,000",
+    "Images": [
+      "https://robohash.org/Van%20Auger.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Lao G",
+    "Epithet": "Lieutenant of the Army of Diamante",
+    "Bounty": "61,000,000",
+    "Images": [
+      "https://robohash.org/Lao%20G.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Woonan",
+    "Epithet": "Captain",
+    "Bounty": "60,000,000",
+    "Images": [
+      "https://robohash.org/Woonan.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Señor Pink",
+    "Epithet": "Lieutenant of the Army of Diamante",
+    "Bounty": "58,000,000",
+    "Images": [
+      "https://robohash.org/Se%C3%B1or%20Pink.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Kelly Funk",
+    "Epithet": "Assassin",
+    "Bounty": "57,000,000",
+    "Images": [
+      "https://robohash.org/Kelly%20Funk.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Needless",
+    "Epithet": "N/A",
+    "Bounty": "57,000,000",
+    "Images": [
+      "https://robohash.org/Needless.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Barbe Rose",
+    "Epithet": "N/A",
+    "Bounty": "52,000,000",
+    "Images": [
+      "https://robohash.org/Barbe%20Rose.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Lafitte",
+    "Epithet": "Commander 5th Ship",
+    "Bounty": "42,200,000",
+    "Images": [
+      "https://robohash.org/Lafitte.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Boa Sandersonia",
+    "Epithet": "N/A",
+    "Bounty": "40,000,000",
+    "Images": [
+      "https://robohash.org/Boa%20Sandersonia.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Boa Marigold",
+    "Epithet": "N/A",
+    "Bounty": "40,000,000",
+    "Images": [
+      "https://robohash.org/Boa%20Marigold.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Sarquiss",
+    "Epithet": "N/A",
+    "Bounty": "38,000,000",
+    "Images": [
+      "https://robohash.org/Sarquiss.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Shojo",
+    "Epithet": "N/A",
+    "Bounty": "36,000,000",
+    "Images": [
+      "https://robohash.org/Shojo.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Bobby Funk",
+    "Epithet": "Assassin",
+    "Bounty": "36,000,000",
+    "Images": [
+      "https://robohash.org/Bobby%20Funk.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Zala",
+    "Epithet": "Special Agent",
+    "Bounty": "35,000,000",
+    "Images": [
+      "https://robohash.org/Zala.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Bentham",
+    "Epithet": "Special Agent",
+    "Bounty": "32,000,000",
+    "Images": [
+      "https://robohash.org/Bentham.png?size=600x400&set=set4"
+    ]
+  },
+  {
+    "name": "Gladius",
+    "Epithet": "Pica Army Lieutenant",
+    "Bounty": "31,000,000",
+    "Images": [
+      "https://robohash.org/Gladius.png?size=600x400&set=set4"
     ]
   }
 ]
