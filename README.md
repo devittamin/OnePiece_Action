@@ -1,4 +1,4 @@
-## 오늘의 해적 🏴‍☠️
+## 오늘의 해적왕 🏴‍☠️
 
 - **이름:** <!--OP_CHAR_NAME_START-->King<!--OP_CHAR_NAME_END-->
 - **별명:** <!--OP_CHAR_EPITHET_START-->Superstar<!--OP_CHAR_EPITHET_END-->
